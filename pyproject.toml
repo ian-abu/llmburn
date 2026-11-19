@@ -28,6 +28,12 @@ openai = ["openai"]
 anthropic = ["anthropic"]
 all = ["google-genai", "openai", "anthropic"]
 
+[project.urls]
+Homepage = "https://github.com/ian-abu/llmburn"
+Source = "https://github.com/ian-abu/llmburn"
+Issues = "https://github.com/ian-abu/llmburn/issues"
+Changelog = "https://github.com/ian-abu/llmburn/releases"
+
 [project.scripts]
 llmburn = "llmburn.cli:main"
 
