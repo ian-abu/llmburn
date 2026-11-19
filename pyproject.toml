@@ -1,0 +1,36 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "llmburn"
+version = "0.2.0"
+description = "See who's burning your AI budget: per-user cost tracking and spending caps for OpenAI, Anthropic and Gemini."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.9"
+authors = [{ name = "Ian Abu" }]
+dependencies = []
+keywords = ["llm", "cost", "tracking", "gemini", "openai", "anthropic", "claude", "token", "budget", "usage", "billing", "ai"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: System :: Monitoring",
+]
+
+[project.optional-dependencies]
+gemini = ["google-genai"]
+openai = ["openai"]
+anthropic = ["anthropic"]
+all = ["google-genai", "openai", "anthropic"]
+
+[project.scripts]
+llmburn = "llmburn.cli:main"
+
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
